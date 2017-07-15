@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Cryptography.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="key" Type="System.String" Scope="User">
+      <Value Profile="(Default)">80F224F45DFA57365164FDA063387666</Value>
+    </Setting>
+    <Setting Name="iv" Type="System.String" Scope="User">
+      <Value Profile="(Default)">90197D34559FD414B916A6EAD9B8DD63</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
