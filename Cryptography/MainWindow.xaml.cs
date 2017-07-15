@@ -63,9 +63,18 @@ namespace Cryptography
             {
                 filePath = fileDialog.FileName;
 
-                value = AesCrypto.Decrypt(File.ReadAllText(filePath), key, iv);
-                PropertyChanged(this, new PropertyChangedEventArgs("value"));
-                saveBtn.IsEnabled = true;
+                try
+                {
+                    value = AesCrypto.Decrypt(File.ReadAllText(filePath), key, iv);
+                    PropertyChanged(this, new PropertyChangedEventArgs("value"));
+                    saveBtn.IsEnabled = true;
+
+                    MessageBox.Show("復号化処理が成功しました。", "復号化", MessageBoxButton.OK, MessageBoxImage.Warning);
+                }
+                catch
+                {
+                    MessageBox.Show("復号化処理が失敗しました。", "復号化", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
             }
         }
 
