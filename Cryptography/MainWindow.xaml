@@ -30,7 +30,7 @@
         </StackPanel>
 
         <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
-            <TextBox AcceptsReturn="True" MinHeight="300" Text="{Binding Path=value, Mode=TwoWay}"/>
+            <TextBox  Name="textArea" AcceptsReturn="True" MinHeight="300" Text="{Binding Path=value, Mode=TwoWay}" TextChanged="textArea_TextChanged"/>
         </ScrollViewer>
 
         <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" >

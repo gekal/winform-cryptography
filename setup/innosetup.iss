@@ -1,6 +1,6 @@
 #define MyAppName "à√çÜâªÉcÅ[Éã"
 #define MyAppEnName "cryptography"
-#define MyAppVersion "1.0.1"
+#define MyAppVersion "1.0.2"
 #define MyAppPublisher "Gekal, Inc."
 #define MyAppURL "https://github.com/gekal/winform-cryptography"
 #define MyAppExeName "Cryptography.exe"

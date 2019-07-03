@@ -3,6 +3,7 @@ using Microsoft.Win32;
 using System.ComponentModel;
 using System.IO;
 using System.Windows;
+using System.Windows.Controls;
 
 namespace Cryptography
 {
@@ -85,6 +86,17 @@ namespace Cryptography
         /// <param name="e">e</param>
         private void saveBtn_Click(object sender, RoutedEventArgs e)
         {
+            // パスが指定されない場合、選択する
+            if (string.IsNullOrWhiteSpace(filePath))
+            {
+                var sfd = new SaveFileDialog();
+                if (sfd.ShowDialog() != true)
+                {
+                    return;
+                }
+
+                filePath = sfd.FileName;
+            }
 
             try
             {
@@ -99,5 +111,21 @@ namespace Cryptography
             }
         }
 
+        /// <summary>
+        /// テストチェンジイベント
+        /// </summary>
+        /// <param name="sender">sender</param>
+        /// <param name="e">e</param>
+        private void textArea_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (!string.IsNullOrWhiteSpace(textArea.Text) || !string.IsNullOrWhiteSpace(filePath))
+            {
+                saveBtn.IsEnabled = true;
+            }
+            else
+            {
+                saveBtn.IsEnabled = false;
+            }
+        }
     }
 }
